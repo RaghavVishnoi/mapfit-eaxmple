@@ -13,5 +13,5 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-//= require mapfit.js
 //= require tangram.min.js
+//= require mapfit.js
