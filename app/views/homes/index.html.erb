@@ -1,0 +1,60 @@
+<script>
+  $(document).ready(function(){
+    const myPoints = [
+      {
+        "id": "Mapfit", 
+        "location" : "119 W 24th St, New York, NY", 
+        "cardData": {
+          "title": "Mapfit", 
+          "subTitle1": "119 W 24th St", 
+          "subTitle2": "Mappers"
+        },
+        "markerUrl": "commercial"
+      },
+      {
+        "id": "secondPoint", 
+        "location" : "30 W 24th St, New York, NY", 
+        "cardData": {
+          "title": "Tacombi Flatiron", 
+          "subTitle1": "Born on the balmy beaches of the Yucatan, serving tacos out of a converted VW bus, Tacombi shares authentic Mexican taco culture", 
+          "subTitle2": "Tacos"
+        },
+        "markerUrl": "restaurant"
+      },
+      {
+        "id": "thirdPoint", 
+        "location" : "99 Margaret Corbin Dr, New York, NY", 
+        "cardData": {
+          "title": "The Cloisters", 
+          "subTitle1": "99 Margaret Corbin Dr", 
+          "subTitle2": "Museum"
+        },
+        "markerUrl": "arts"
+      },
+      {
+        "id": "testpoint", 
+        "location" : "1000 5th Ave, New York, NY", 
+        "cardData": {
+          "title": "The MET", 
+          "subTitle1": "1000 5th Ave", 
+          "subTitle2": "The Metropolitan Museum of Art is one of the world's largest and finest art museums"
+        },
+        "markerUrl": "arts"
+      }
+    ];
+
+  L.mapfit.drawmap('mapfit', 'day', 'cardsOn', 'zoomPanOn', 'extNavOff', '591dccc4e499ca0001a4c6a476c8427f8ffa4d1ebc363357333f2243');
+
+  L.mapfit.addMarkers(myPoints, 'mapfit', 'day');
+
+  function deletePoints() {
+    L.mapfit.deleteMarkers(myPoints, 'mapfit');
+  };
+
+})
+  
+</script>
+
+<div style="width: 1000px;height: 700px;" id="mapfit">
+  
+</div>
